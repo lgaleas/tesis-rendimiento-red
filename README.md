@@ -15,6 +15,12 @@ Ingeniería del Caos (tc/netem).
 
 ![Latencia P99 por escenario](resultados/graficas/comp_01_latency_evolution.png)
 
+## Hallazgos principales
+
+- **Bajo carga ideal (Escenario A, 100 RPS)**: en el endpoint `/cpu`, FastAPI mantuvo una latencia P99 de ~3 ms frente a los ~25 ms de Express, con un uso de CPU sustancialmente menor (~28% vs ~90%).
+- **Bajo red degradada (Escenarios B y C)**: ambos frameworks convergen a un comportamiento similar — la latencia P99 se dispara por encima de los 850-950 ms y la tasa de errores supera el 35-50%, dominada por la degradación de red (tc/netem) más que por el framework en sí.
+- **Prueba de resistencia (soak test, 60 min, 50 RPS)**: con throughput y latencia prácticamente idénticos entre ambos (~49.9 RPS, ~880 ms P99), **FastAPI mostró un drift de memoria de +48 MiB** a lo largo de la hora, mientras que **Express se mantuvo estable en +1.2 MiB** — una diferencia relevante para servicios de larga duración que no aparece en pruebas cortas.
+
 ## Cómo correr el experimento
 
 ```bash
