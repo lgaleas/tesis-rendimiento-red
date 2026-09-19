@@ -1,0 +1,9 @@
+\begin{table}
+\caption{Resultados consolidados de estabilidad a largo plazo (soak test de 60 min a 50 RPS)}
+\label{tab:soak_summary}
+\begin{tabular}{llrrrrrrr}
+ & Framework & P99 (ms) & Error Rate (%) & Throughput (RPS) & RAM Max (MiB) & RAM Drift (MiB) & TCP Max & Temp Media (°C) \\
+0 & FastAPI & 881.18 & 39.28 & 49.86 & 121.00 & 48.19 & 53 & 36.46 \\
+1 & Express & 880.46 & 37.33 & 49.86 & 104.70 & 1.22 & 52 & 36.27 \\
+\end{tabular}
+\end{table}

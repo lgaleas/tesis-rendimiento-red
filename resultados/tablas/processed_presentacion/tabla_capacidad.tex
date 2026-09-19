@@ -1,0 +1,15 @@
+\begin{table}[h]
+\centering
+\caption{Capacidad máxima y punto de saturación}
+\label{tab:capacidad}
+\begin{tabular}{lccccccc}
+\hline
+Framework & Endpoint & RPS máx & P99 Sost (ms) & RPS sat. & P99 Sat (ms) & Errores & RPS Pico \\
+\hline
+Express & CPU & 122.0 & 18.0 & 120.0 & 513.7 & 0 & 248.0 \\
+Express & IO & 249.0 & 0.4 & 0.0 & 0.0 & 0 & 249.0 \\
+FastAPI & IO & 249.0 & 0.9 & 0.0 & 0.0 & 0 & 249.0 \\
+FastAPI & CPU & 249.0 & 12.8 & 0.0 & 0.0 & 0 & 249.0 \\
+\hline
+\end{tabular}
+\end{table}

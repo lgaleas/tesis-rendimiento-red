@@ -1,0 +1,9 @@
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.pyc
+logs/
+*.log
+.DS_Store
+resultados/tablas/processed/raw_csvs_grandes/
