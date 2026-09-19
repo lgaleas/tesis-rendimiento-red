@@ -1,5 +1,7 @@
 # Impacto del rendimiento de FastAPI vs Express.js bajo degradación de red
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22841248.svg)](https://doi.org/10.5281/zenodo.22841248)
+
 Tesis de grado — evaluación empírica del rendimiento de dos frameworks
 backend (FastAPI, Express.js) bajo condiciones de red degradada,
 simulando infraestructura de telecomunicaciones ecuatoriana mediante
@@ -32,7 +34,7 @@ docker compose up -d
 
 Los datos crudos completos (~10GB, todas las repeticiones y escenarios,
 más los CSVs de latencias/errores/GC por petición individual)
-están publicados en Zenodo: **[DOI pendiente]**
+están publicados en Zenodo: [10.5281/zenodo.22841248](https://doi.org/10.5281/zenodo.22841248)
 
 ## Stack técnico
 
